@@ -25,7 +25,6 @@
                 </div>
                 <div class="card__img">
                     <img *ngIf="classicMode" [src]="pokemon.sprites?.front_default" [alt]="pokemon.name">
-                    <img *ngIf="!classicMode" src="https://projectpokemon.org/images/normal-sprite/{{pokemon.name}}.gif" [alt]="searchPokemon.name">
                 </div>
             </div>
         </div>
@@ -34,7 +33,7 @@
     <div *ngIf="isSearching" class="pokemon__list" (scroll)="onScroll($event)">
         <div (click)="onDetail(searchPokemon)" class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
             <div class="card {{'bg-color-'+getPrincipalType(searchPokemon.types) +'-light'}}">
-                <img class="card__bg" src="../../../assets/images/pokeball-background.png" alt="pokeball-card" />
+                <img class="card__bg" src="https://www.freepnglogos.com/uploads/pokemon-symbol-logo-png-31.png" alt="pokeball-card" />
                 <div class="card__info">
                     <h2 class="color-white">{{searchPokemon.name}}</h2>
                     <span class="color-white {{'bg-color-'+getPrincipalType(searchPokemon.types)}}" *ngFor="let type of searchPokemon.types">{{type.type.name}}</span>                    
