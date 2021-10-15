@@ -66,7 +66,7 @@ export class PokemonListComponent implements OnInit {
       }, (error: any) => {
         this.isLoading = false;
         if(error.status === 404) {
-          this.snackBar.open('Sorry, Pokemon not found', 'Ok', {
+          this.snackBar.open('No se ha encontrado el pokemón que buscas', 'Cerrar', {
             duration: 5000,
           });
         }
