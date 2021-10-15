@@ -18,7 +18,7 @@
     <div *ngIf="!isSearching" class="row pokemon__list" (scroll)="onScroll($event)">
         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4" *ngFor="let pokemon of pokemons" (click)="onDetail(pokemon)">
             <div class="card {{'bg-color-'+ getPrincipalType(pokemon.types) + '-light'}}">
-                <img class="card__bg" src="../../../assets/images/pokeball-background.png" alt="pokeball-card">
+                <img class="card__bg" src="https://www.freepnglogos.com/uploads/pokemon-symbol-logo-png-31.png" alt="pokeball-card">
                 <div class="card__info">
                     <h2 class="color-white">{{pokemon.name}}</h2>
                     <span class="color-white {{'bg-color-' + getPrincipalType(pokemon.types)}}" *ngFor="let type of pokemon.types">{{type.type.name}}</span>
@@ -49,3 +49,6 @@
 
 
 </div>
+
+
+<!-- <a href="https://www.freepnglogos.com/pics/pokemon-logo-png" title="Image from freepnglogos.com"><img src="https://www.freepnglogos.com/uploads/pokemon-symbol-logo-png-31.png" width="200" alt="pokemon symbol logo png" /></a> -->
